@@ -1,4 +1,4 @@
-One of my first C++ projects. A classic starter project and a classic game: Rock, Paper, Scissors. This timeless game is simple yet addictive, making it perfect for quick entertainment and strategic thinking.
+One of my first C++ projects. A classic starter project and a classic game: Rock, Paper, Scissors. This timeless game is simple yet addictive, making it perfect for quick entertainment.
 
 Language: Romanian (my native language)
 
