@@ -9,20 +9,31 @@ int generareMiscareCalculator() {
     return rand() % 3 + 1; // Genereaza un numar intre 1 si 3
 }
 
+// Functie pentru a transforma miscarea numerica a calculatorului in denumirea corespunzatoare
+string transformaMiscare(int miscare) {
+    switch (miscare) {
+    case 1:
+        return "Piatra";
+    case 2:
+        return "Foarfeca";
+    case 3:
+        return "Hartie";
+    default:
+        return "Miscare invalida";
+    }
+}
+
 // Functie pentru a afisa optiunile disponibile
 void afisareOptiuni() {
-    cout << "0. Iesi\n";
     cout << "1. Piatra\n";
     cout << "2. Foarfeca\n";
     cout << "3. Hartie\n";
+    cout << "0. Iesi\n";
 }
 
 // Functie pentru a determina rezultatul jocului si a actualiza scorul
 void determinaCastigatorul(int miscareJucator, int miscareCalculator, int& scorJucator, int& scorCalculator) {
-    if (miscareJucator == 0) {
-        cout << "Iesire din joc.\n";
-    }
-    else if (miscareJucator == miscareCalculator) {
+    if (miscareJucator == miscareCalculator) {
         cout << "Egalitate!\n";
     }
     else if ((miscareJucator == 1 && miscareCalculator == 2) ||
@@ -42,6 +53,7 @@ int main() {
     int miscareCalculator;
     int scorJucator = 0;
     int scorCalculator = 0;
+    int modJoc;
 
     // Initializare pentru generarea de numere aleatorii
     srand(time(0));
@@ -49,31 +61,55 @@ int main() {
     cout << "Bine ati venit la jocul Piatra, Foarfeca, Hartie!\n";
 
     do {
-        cout << "Alege o miscare (0 pentru iesire):\n";
-        afisareOptiuni();
-        cin >> miscareJucator;
+        cout << "Alege un mod de joc:\n";
+        cout << "1. Best of three\n";
+        cout << "2. Endless\n";
+        cout << "0. Iesi\n";
+        cin >> modJoc;
 
-        // Verificare validitate miscare jucator
-        while (miscareJucator < 0 || miscareJucator > 3) {
-            cout << "Miscare invalida! Te rog alege o miscare valida:\n";
-            afisareOptiuni();
-            cin >> miscareJucator;
-        }
+        switch (modJoc) {
+        case 0:
+            cout << "Iesire din joc.\n";
+            break;
+        case 1:
+            cout << "Modul Best of three este in lucru.\n";
+            break;
+        case 2:
+            cout << "\nModul Endless:\n";
+            do {
+                cout << "Alege o miscare (0 pentru iesire):\n";
+                afisareOptiuni();
+                cin >> miscareJucator;
 
-        if (miscareJucator != 0) {
-            miscareCalculator = generareMiscareCalculator();
-            cout << "Calculatorul a ales: " << miscareCalculator << endl;
-            cout << "Jucatorul a ales: " << miscareJucator << endl;
+                // Verificare validitate miscare jucator
+                while (miscareJucator < 0 || miscareJucator > 3) {
+                    cout << "Miscare invalida! Te rog alege o miscare valida:\n";
+                    afisareOptiuni();
+                    cin >> miscareJucator;
+                }
 
-            determinaCastigatorul(miscareJucator, miscareCalculator, scorJucator, scorCalculator);
+                if (miscareJucator != 0) {
+                    miscareCalculator = generareMiscareCalculator();
+                    cout << "\nCalculatorul a ales: " << transformaMiscare(miscareCalculator) << endl;
+                    cout << "Jucatorul a ales: " << transformaMiscare(miscareJucator) << endl;
 
-            cout << "Scorul curent:\n";
+                    determinaCastigatorul(miscareJucator, miscareCalculator, scorJucator, scorCalculator);
+
+                    cout << "Scorul curent:\n";
+                    cout << "Jucator: " << scorJucator << " | Calculator: " << scorCalculator << endl;
+                }
+            } while (miscareJucator != 0);
+
+            cout << "\n############################\nScor final:\n";
             cout << "Jucator: " << scorJucator << " | Calculator: " << scorCalculator << endl;
-        }
-    } while (miscareJucator != 0);
+            cout << "Multumim pentru joc!\n############################\n\n";
 
-    cout << "Multumim pentru joc! Scor final:\n";
-    cout << "Jucator: " << scorJucator << " | Calculator: " << scorCalculator << endl;
+            break;
+        default:
+            cout << "Mod de joc invalid! Te rog alege din nou.\n";
+        }
+
+    } while (modJoc != 0);
 
     return 0;
 }
