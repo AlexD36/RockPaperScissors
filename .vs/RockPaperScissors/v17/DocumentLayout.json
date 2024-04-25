@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Alex\\Documents\\GitHub\\RockPaperScissors\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBD5EE4-19C0-4EE7-A551-0DFDF8178BA6}|RockPaperScissors\\RockPaperScissors.vcxproj|C:\\Users\\Alex\\Documents\\GitHub\\RockPaperScissors\\RockPaperScissors\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5BBD5EE4-19C0-4EE7-A551-0DFDF8178BA6}|RockPaperScissors\\RockPaperScissors.vcxproj|solutionrelative:RockPaperScissors\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\RockPaperScissors\\RockPaperScissors\\main.cpp",
+              "RelativeDocumentMoniker": "RockPaperScissors\\main.cpp",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\RockPaperScissors\\RockPaperScissors\\main.cpp",
+              "RelativeToolTip": "RockPaperScissors\\main.cpp",
+              "ViewState": "AQIAADYAAAAAAAAAAAAkwE8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-22T06:34:50.981Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
