@@ -1,3 +1,4 @@
 ﻿  main.cpp
-C:\Users\Alex\Documents\GitHub\RockPaperScissors\RockPaperScissors\main.cpp(59,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Alex\Documents\GitHub\RockPaperScissors\RockPaperScissors\main.cpp(55,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Alex\Documents\GitHub\RockPaperScissors\RockPaperScissors\main.cpp(90,29): warning C4566: character represented by universal-character-name '\u0219' cannot be represented in the current code page (1252)
   RockPaperScissors.vcxproj -> C:\Users\Alex\Documents\GitHub\RockPaperScissors\x64\Debug\RockPaperScissors.exe
